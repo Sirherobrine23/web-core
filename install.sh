@@ -27,7 +27,7 @@ echo "Config samba";
  echo "Config SSH"
     cd /tmp > /dev/null 2>&1;
   wget https://raw.githubusercontent.com/Sirherobrine23/web-core/master/ssh.txt > /dev/null 2>&1;
-  mv /etc/sshd_config ~/backup.sshd_config > /dev/null 2>&1;
+  mv /etc/sshd_config ~/backup.sshd_config.txt > /dev/null 2>&1;
   cat /tmp/ssh.txt >> /etc/ssh/sshd_config ;
   service ssh reload > /dev/null 2>&1;
   service sshd reload > /dev/null 2>&1;
