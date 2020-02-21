@@ -1,0 +1,178 @@
+server {
+	listen 80 default_server;
+	listen [::]:80 default_server;
+
+
+	root /var/www/80;
+
+	# Add index.php to the list if you are using PHP
+	index index.html index.htm index.nginx-debian.html;
+
+	server_name _;
+
+	location / {
+		# First attempt to serve request as file, then
+		# as directory, then fall back to displaying a 404.
+		try_files $uri $uri/ =404;
+	}
+}
+
+
+
+# managed by Certbot
+
+
+server {
+
+
+	root /var/www/html;
+
+	# Add index.php to the list if you are using PHP
+	index index.html index.htm index.nginx-debian.html;
+    server_name sirherobrine23.ddns.net ; 
+
+
+	location / {
+		# First attempt to serve request as file, then
+		# as directory, then fall back to displaying a 404.
+		try_files $uri $uri/ =404;
+	}
+
+
+
+
+}
+
+server {
+
+
+	root /var/www/files;
+
+	# Add index.php to the list if you are using PHP
+	index index.html index.htm index.nginx-debian.html;
+    server_name arquivos-sh23.ddns.net; 
+
+
+	location / {
+    autoindex on;
+    autoindex_exact_size off;
+    autoindex_format html;
+    autoindex_localtime on;
+	}
+
+
+
+
+}
+server {
+
+
+	root /var/www/sonic;
+
+	# Add index.php to the list if you are using PHP
+	index index.html index.htm index.nginx-debian.html;
+    server_name  sonicsirherobrine23.ddns.net; 
+
+
+	location / {
+		# First attempt to serve request as file, then
+		# as directory, then fall back to displaying a 404.
+		try_files $uri $uri/ =404;
+	}
+
+
+
+
+}
+server {
+
+
+	root /var/www/mcpe;
+
+	# Add index.php to the list if you are using PHP
+	index index.html index.htm index.nginx-debian.html;
+    server_name  mcpesirherobrine23.ddns.net; 
+
+
+	location / {
+		# First attempt to serve request as file, then
+		# as directory, then fall back to displaying a 404.
+		try_files $uri $uri/ =404;
+	}
+
+
+
+
+}
+
+server {
+
+
+	root /var/www/en;
+
+	# Add index.php to the list if you are using PHP
+	index index.html index.htm index.nginx-debian.html;
+    server_name  sh23.ddns.net; 
+
+
+	location / {
+		# First attempt to serve request as file, then
+		# as directory, then fall back to displaying a 404.
+		try_files $uri $uri/ =404;
+	}
+
+}
+
+
+
+
+
+
+server {
+    if ($host = sirherobrine23.ddns.net) {
+        return 301 https://$host$request_uri;
+    } 
+
+
+    if ($host = sonicsirherobrine23.ddns.net) {
+        return 301 https://$host$request_uri;
+    } 
+
+
+    if ($host = mcpesirherobrine23.ddns.net) {
+        return 301 https://$host$request_uri;
+    } 
+
+
+    if ($host = arquivos-sh23.ddns.net) {
+        return 301 https://$host$request_uri;
+    } 
+
+
+	listen 80 ;
+	listen [::]:80 ;
+    server_name sirherobrine23.ddns.net arquivos-sh23.ddns.net sonicsirherobrine23.ddns.net mcpesirherobrine23.ddns.net;
+    return 404; 
+
+
+
+
+
+
+
+
+}
+
+
+server {
+    if ($host = sh23.ddns.net) {
+        return 301 https://$host$request_uri;
+    } # managed by Certbot
+
+
+    server_name  sh23.ddns.net;
+    listen 80;
+    return 404; # managed by Certbot
+
+
+}
