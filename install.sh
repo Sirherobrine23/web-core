@@ -1,6 +1,6 @@
 #!/bin/bash
 
-claer > /dev/null 2>&1;
+claer ;
 echo "Update Repository";
   apt update > /dev/null 2>&1;
 echo "Update Packages";
