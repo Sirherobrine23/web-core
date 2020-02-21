@@ -123,3 +123,12 @@
     force group = root
     admin users = someusers, somegroup, root
     writeable = Yes
+    
+    [Files]
+    comment = Admin Config Share  - Whatever
+    path = /Arquvos-compartilhados/
+    valid users = someusers, somegroup, root
+    force user = root
+    force group = root
+    admin users = someusers, somegroup, root
+    writeable = Yes
