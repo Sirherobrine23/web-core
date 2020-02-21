@@ -18,7 +18,7 @@ echo "Installing Samba";
 #config
 
 echo "Config samba";
-  cd /tmp > ;
+  cd /tmp > /dev/null 2>&1;
   wget https://raw.githubusercontent.com/Sirherobrine23/web-core/master/smb.txt > /dev/null 2>&1;
   mv /etc/samba/smb.conf ~/backup.smb.conf > /dev/null 2>&1;
   cat /tmp/smb.txt >> /etc/samba/smb.conf > /dev/null 2>&1;
