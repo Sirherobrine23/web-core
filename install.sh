@@ -17,7 +17,17 @@ echo "Installing Samba";
 #config
 
 echo "Config samba";
-  wget 
+  cd /tmp > ;
+  wget https://raw.githubusercontent.com/Sirherobrine23/web-core/master/smb.txt > /dev/null 2>&1;
+  mv /etc/samba/smb.conf ~/backup.smb.conf > /dev/null 2>&1;
+  cat /tmp/smb.txt >> /etc/samba/smb.conf > /dev/null 2>&1;
+  service smbd reload > /dev/null 2>&1;
   
+ echo "Config SSH"
+    cd /tmp > /dev/null 2>&1;
+  wget https://raw.githubusercontent.com/Sirherobrine23/web-core/master/ssh.txt > /dev/null 2>&1;
+  mv /etc/sshd_config ~/backup.sshd_config > /dev/null 2>&1;
+  cat /tmp/ssh.txt >> /etc/ssh/sshd_config > /dev/null 2>&1;
+  service ssh reload > /dev/null 2>&1;
   
-echo "Execute 'certboot --nginx'";
+echo "Execute 'certboot --nginx' para terminar as configurações do nginx no HTTPS";
