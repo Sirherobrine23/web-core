@@ -1,0 +1,8 @@
+firewall Google Cloud: 
+https://console.cloud.google.com/networking/firewalls/list? ;
+
+Firewall Azure:
+nas configurações da interface de rede ou nas configurações da VM ;
+
+Firewall AWS:
+?
