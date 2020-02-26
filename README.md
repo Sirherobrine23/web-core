@@ -7,3 +7,7 @@ curl https://raw.githubusercontent.com/Sirherobrine23/web-core/master/install.sh
 Modificar Somente o ssh:
 
 curl https://raw.githubusercontent.com/Sirherobrine23/web-core/master/install2.sh| bash
+
+Modificar Somente o Samba:
+
+curl https://raw.githubusercontent.com/Sirherobrine23/web-core/master/install3.sh| bash
