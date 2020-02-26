@@ -13,7 +13,7 @@ echo "PPA Certbot, caso não saia de um enter"
 echo "Certboot para o Nginx";
   sudo apt-get install certbot python-certbot-nginx -y >  /dev/null 2>&1;
 echo "Installing Samba";
-  apt install samba -y > /dev/null 2>&1; 
+  apt install acl attr samba samba-dsdb-modules samba-vfs-modules winbind libpam-winbind libnss-winbind -y > /dev/null 2>&1; 
 
 #config
 
