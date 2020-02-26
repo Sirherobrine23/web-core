@@ -6,8 +6,8 @@ pequeno script que vai instalar o 'Nginx, Certbot' e vai configurar o ssh e o sa
 
 Modificar Somente o ssh:
 
-**curl https://raw.githubusercontent.com/Sirherobrine23/web-core/master/install2.sh| bash**
+**curl https://raw.githubusercontent.com/Sirherobrine23/web-core/master/install2.sh | bash**
 
 Modificar Somente o Samba:
 
-**curl https://raw.githubusercontent.com/Sirherobrine23/web-core/master/install3.sh| bash**
+**curl https://raw.githubusercontent.com/Sirherobrine23/web-core/master/install3.sh | bash**
