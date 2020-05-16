@@ -1,13 +1,13 @@
 # web-core
 
-pequeno script que vai instalar o 'Nginx, Certbot' e vai configurar o ssh e o samba:
+pequeno script que vai instalar o 'Apache2, Certbot' e vai configurar o ssh e o samba:
 
-**curl https://raw.githubusercontent.com/Sirherobrine23/web-core/master/install.sh | bash**
+<code>curl https://raw.githubusercontent.com/Sirherobrine23/web-core/master/core-complete.sh | bash</code>
 
 Modificar Somente o ssh:
 
-**curl https://raw.githubusercontent.com/Sirherobrine23/web-core/master/install2.sh | bash**
+<code>curl https://raw.githubusercontent.com/Sirherobrine23/web-core/master/core-ssh.sh | bash</code>
 
 Modificar Somente o Samba:
 
-**curl https://raw.githubusercontent.com/Sirherobrine23/web-core/master/install3.sh | bash**
+<code>curl https://raw.githubusercontent.com/Sirherobrine23/web-core/master/core-samba.sh | bash</code>

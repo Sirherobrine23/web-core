@@ -36,7 +36,7 @@ done
 #config
 
 echo " Config samba";
-  wget https://raw.githubusercontent.com/Sirherobrine23/web-core/master/smb.txt -O ~/smb.txt> /dev/null 2>&1;
+  sudo wget https://raw.githubusercontent.com/Sirherobrine23/web-core/master/smb.txt -O ~/smb.txt> /dev/null 2>&1;
   sudo rm /etc/samba/smb.conf > /dev/null 2>&1;
   sudo mv /tmp/smb.txt /etc/samba/smb.conf > /dev/null 2>&1;
   sudo service smbd reload > /dev/null 2>&1;

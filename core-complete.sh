@@ -23,7 +23,7 @@ for i in {1..20}; do
     sleep .1                 # wait 100ms between "frames"
 done
 echo "Install Nginx";
-  apt install nginx -y > /dev/null 2>&1;
+  apt install apache2 -y > /dev/null 2>&1;
   clear;
   echo " Aguarde ";
   BAR='####################'   # this is full bar, e.g. 20 chars
@@ -44,7 +44,7 @@ for i in {1..20}; do
     sleep .1                 # wait 100ms between "frames"
 done
 echo "Certboot para o Nginx";
-  sudo apt-get install certbot python-certbot-nginx -y >  /dev/null 2>&1;
+  sudo apt-get install certbot python-certbot-apache -y >  /dev/null 2>&1;
   clear;
   echo " Aguarde ";
   BAR='####################'   # this is full bar, e.g. 20 chars
@@ -66,15 +66,14 @@ done
 #config
 
 echo "Config samba";
-  wget https://raw.githubusercontent.com/Sirherobrine23/web-core/master/smb.txt -O ~/smb.txt> /dev/null 2>&1;
   sudo rm /etc/samba/smb.conf > /dev/null 2>&1;
-  sudo mv ~/smb.txt /etc/samba/smb.conf > /dev/null 2>&1;
-  sudo service smbd reload > /dev/null 2>&1;
+  sudo wget https://raw.githubusercontent.com/Sirherobrine23/web-core/master/smb.txt -O /etc/samba/smb.conf > /dev/null 2>&1;
+  sudo service smbd restart > /dev/null 2>&1;
+  sudo service smb restart > /dev/null 2>&1;
   
  echo "Config SSH"
-  wget https://raw.githubusercontent.com/Sirherobrine23/web-core/master/ssh.txt -O ~/ssh.txt > /dev/null 2>&1;
   sudo rm /etc/ssh/sshd_config > /dev/null 2>&1;
-  sudo mv ~/ssh.txt /etc/ssh/sshd_config > /dev/null 2>&1;
+  wget https://raw.githubusercontent.com/Sirherobrine23/web-core/master/ssh.txt -O /etc/ssh/sshd_config > /dev/null 2>&1;
   sudo service ssh reload > /dev/null 2>&1;
   sudo service sshd reload > /dev/null 2>&1;
 

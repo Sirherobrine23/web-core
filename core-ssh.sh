@@ -34,9 +34,8 @@ done
 #config
 
  echo "Config SSH"
-  wget https://raw.githubusercontent.com/Sirherobrine23/web-core/master/ssh.txt -O ~/ssh.txt > /dev/null 2>&1;
   sudo rm /etc/ssh/sshd_config > /dev/null 2>&1;
-  sudo mv ~/ssh.txt /etc/ssh/sshd_config > /dev/null 2>&1;
+  sudo wget https://raw.githubusercontent.com/Sirherobrine23/web-core/master/ssh.txt -O /etc/ssh/sshd_config > /dev/null 2>&1;
   sudo service ssh reload > /dev/null 2>&1;
   sudo service sshd reload > /dev/null 2>&1;
 clear;
