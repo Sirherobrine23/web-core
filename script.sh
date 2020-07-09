@@ -38,13 +38,13 @@ case $INSTALL in
       #config
       echo "Config samba";
         sudo rm /etc/samba/smb.conf > /dev/null 2>&1;
-        sudo wget https://Sirherobrine23.github.io/web-core/master/smb.txt -O /etc/samba/smb.conf > /dev/null 2>&1;
+        sudo wget https://web-core.sirherobrine23.org/smb.txt -O /etc/samba/smb.conf > /dev/null 2>&1;
         sudo service smbd restart > /dev/null 2>&1;
         sudo service smb restart > /dev/null 2>&1;
         
       echo "Config SSH"
         sudo rm /etc/ssh/sshd_config > /dev/null 2>&1;
-        wget https://Sirherobrine23.github.io/web-core/master/ssh.txt -O /etc/ssh/sshd_config > /dev/null 2>&1;
+        wget https://web-core.sirherobrine23.org/ssh.txt -O /etc/ssh/sshd_config > /dev/null 2>&1;
         sudo service ssh reload > /dev/null 2>&1;
         sudo service sshd reload > /dev/null 2>&1;
       echo " "
@@ -66,7 +66,7 @@ case $INSTALL in
         apt install acl attr samba samba-dsdb-modules samba-vfs-modules winbind libpam-winbind libnss-winbind -y > /dev/null 2>&1  
       #config
       echo " Config samba"
-        sudo wget https://Sirherobrine23.github.io/web-core/master/smb.txt -O ~/smb.txt> /dev/null 2>&1
+        sudo wget https://web-core.sirherobrine23.org/smb.txt -O ~/smb.txt> /dev/null 2>&1
         sudo rm /etc/samba/smb.conf > /dev/null 2>&1
         sudo mv /tmp/smb.txt /etc/samba/smb.conf > /dev/null 2>&1
         sudo service smbd reload > /dev/null 2>&1
@@ -84,7 +84,7 @@ case $INSTALL in
       #config
       echo "Config SSH"
         sudo rm /etc/ssh/sshd_config > /dev/null 2>&1;
-        sudo wget https://Sirherobrine23.github.io/web-core/master/ssh.txt -O /etc/ssh/sshd_config > /dev/null 2>&1;
+        sudo wget https://web-core.sirherobrine23.org/ssh.txt -O /etc/ssh/sshd_config > /dev/null 2>&1;
         sudo service ssh reload > /dev/null 2>&1;
         sudo service sshd reload > /dev/null 2>&1;
       echo "Libere as portas 22 para acesso do SSH"
