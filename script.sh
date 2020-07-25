@@ -57,9 +57,7 @@ case $INSTALL in
   *samba* | *smb* )
       echo " Script para Configurar o Samba"
       echo " Update Repository"
-        apt update > /dev/null 2>&1 
-      echo " Update Packages"
-        apt dist-upgrade -y > /dev/null 2>&1 
+        apt update > /dev/null 2>&1
       echo " Installing Samba"
         apt install acl attr samba samba-dsdb-modules samba-vfs-modules winbind libpam-winbind libnss-winbind -y > /dev/null 2>&1  
       #config
