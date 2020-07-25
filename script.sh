@@ -11,12 +11,10 @@ else
 	echo "Você não tem instalado ou não esta com sistema Debian ou Ubuntu "
 	exit 1
 fi
-clear;
-
 echo "Instalações"
 echo "Completo - fazerá uma instalação do apache2, ssh e o Samba"
-echo "samba    - fazera apenas a instalaçlão do samba"
-echo "ssh      - fazera apenas a instalaçlão do OpenSsh e liberar o acesso ROOT"
+echo "samba    - fazera apenas a instalaçlão do samba e adicionar pequenas pasta já compartilhada om acesso root"
+echo "ssh      - fazera apenas a instalaçlão do OpenSsh e liberar o acesso ROOT no SSH"
 echo " "
 read -rp "Qual será a Instalação: " -e -i "completo" INSTALL
 case $INSTALL in
@@ -90,3 +88,5 @@ case $INSTALL in
       echo "Libere as portas 22 para acesso do SSH"
   ;;
 esac
+echo "exit"
+exit 
