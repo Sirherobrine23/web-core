@@ -1,6 +1,6 @@
 [global]
    workgroup = WORKGROUP
-	server string = %h server (Samba, Ubuntu)
+	server string = %h SMB server
 #   wins support = no
 ;   wins server = w.x.y.z
    dns proxy = no
@@ -30,20 +30,19 @@
    guest ok = no
    read only = yes
    create mask = 0700
-
 [print$]
    comment = Printer Drivers
    path = /var/lib/samba/printers
    browseable = yes
    read only = yes
    guest ok = no
-[Web]
+[Web folder]
     comment = Share para salvar arquivos do web
     path = /var/www/
     browseable = yes
     read only = no
     guest ok = no
-[Root]
+[Root disk]
     comment = Admin Config Share  - Whatever
     path = /
     valid users = someusers, somegroup, root
@@ -52,11 +51,3 @@
     admin users = someusers, somegroup, root
     writeable = Yes
     wide links = yes
-[TMP]
-    comment = Arquivos temporarios não serão mantidos.
-    path = /fitmp/
-    valid users = someusers, somegroup, root
-    force user = root
-    force group = root
-    admin users = someusers, somegroup, root
-    writeable = Yes
